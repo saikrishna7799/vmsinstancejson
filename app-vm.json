@@ -1,0 +1,65 @@
+{
+    "name": "app-vm",
+    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/virtualMachines/app-vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "vmId": "2eb151ce-350c-4dea-941a-d29afb06f142",
+        "availabilitySet": {
+            "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/availabilitySets/WEB_AVAILABILTY_SET"
+        },
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "Canonical",
+                "offer": "UbuntuServer",
+                "sku": "18.04-LTS",
+                "version": "latest",
+                "exactVersion": "18.04.202306070"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "app-disk",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "writeAcceleratorEnabled": false,
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/disks/app-disk"
+                },
+                "deleteOption": "Detach",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "appserver",
+            "adminUsername": "app_user",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false,
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Network/networkInterfaces/app-network",
+                    "properties": {
+                        "primary": false
+                    }
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    }
+}

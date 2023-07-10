@@ -1,0 +1,65 @@
+{
+    "name": "web-vm",
+    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/virtualMachines/web-vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "vmId": "f12aa71d-d6ea-4fe8-84fd-0ec7ac46e019",
+        "availabilitySet": {
+            "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/availabilitySets/WEB_AVAILABILTY_SET"
+        },
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "Canonical",
+                "offer": "UbuntuServer",
+                "sku": "18.04-LTS",
+                "version": "latest",
+                "exactVersion": "18.04.202306070"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "web-disk",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "writeAcceleratorEnabled": false,
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Compute/disks/web-disk"
+                },
+                "deleteOption": "Detach",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "webserver",
+            "adminUsername": "web_user",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false,
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Network/networkInterfaces/web-network",
+                    "properties": {
+                        "primary": false
+                    }
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    }
+}

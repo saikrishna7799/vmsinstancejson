@@ -1,0 +1,36 @@
+{
+    "sku": {
+        "name": "Standard",
+        "tier": "Standard",
+        "capacity": 10
+    },
+    "kind": "v12.0,user",
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 268435456000,
+        "status": "Online",
+        "databaseId": "ec24f8f8-cf0b-488e-9c67-ffa5715174d9",
+        "creationDate": "2023-07-10T15:37:57.543Z",
+        "currentServiceObjectiveName": "S0",
+        "requestedServiceObjectiveName": "S0",
+        "defaultSecondaryLocation": "southindia",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "Standard",
+            "tier": "Standard",
+            "capacity": 10
+        },
+        "currentBackupStorageRedundancy": "Geo",
+        "requestedBackupStorageRedundancy": "Geo",
+        "maintenanceConfigurationId": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false
+    },
+    "location": "centralindia",
+    "tags": {},
+    "id": "/subscriptions/3480a929-f239-4ce4-8dbf-8a56a73910c4/resourceGroups/azure-stack/providers/Microsoft.Sql/servers/sql-primary-database1/databases/db",
+    "name": "db",
+    "type": "Microsoft.Sql/servers/databases"
+}
